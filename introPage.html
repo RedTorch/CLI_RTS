@@ -1,0 +1,73 @@
+<!-- thanks to Martian for help with debugging, graphics and feedback -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>intro page</title>
+  </head>
+  <body>
+    <div id="main" style="width:85%;height:90%; overflow:hidden;">
+
+      <h1>
+        Tutorial
+      </h1>
+      <p>
+        <h1>
+          <a href="./index.html" style="margin-left: 0px; color: #7777ff" target="_blank">Play the game</a>
+        </h1>
+        <p>
+          UPDATE 2020/02/07: 
+          <ul>
+            <li>"drone1 move drone3" is now possible (drone1 moves to the current coordinates of drone3).</li>
+            <li>drones can now shoot hostiles within their weapon range.</li>
+            <li>added visual indicators of current move target and weapon range.</li>
+            <li>BUG: the page slows down severely sometime around the 1:00:00 mark. still figuring that out.</li>
+            <li>BUG: on some clients (e.g. mine) the intro page is updated but the game page isn't. try incognito.</li>
+          </ul>
+        </p>
+        <p>
+          UPDATE 2020/01/25:
+          <ul>
+            <li>fixed false error message when using dev commands</li>
+          </ul>
+        </p>
+        <p>GENERAL COMMAND FORMAT:
+        <br>
+        <br> In this game, everything is controlled through text commands which follow a specific format:
+        <br> target action param1 param2 param3
+        <br> target: the selected object
+        <br> action: the action you wish the target to perform
+        <br> param1-3: depending on the action, parameters may be required.</p>
+        <p>OBJECTS:
+        <ul>
+        <li>&quot;dev&quot;: a debugging object not meant for the final game.
+        <ul>
+        </p>
+        <li>&quot;spawnHostile [x]&quot;: spawns x many hostiles randomly across the map.</li>
+        <li>&quot;spawnDrone [name] [x] [y]&quot;: spawns a single drone with name [name] at the coordinates (x,y).</li>
+        </ul>
+        </li>
+        <li><p>&quot;[name of drone]&quot;: a player-controlled drone.</p>
+        <ul>
+        <li>&quot;move [x] [y]&quot;: directs the drone to move to the location (x,y).</li>
+        <li>&quot;move [droneName]&quot;: directs the drone to move to the current location of the drone &quot;droneName&quot;.</li>
+        <li>&quot;stop&quot;: stops the drone. This will also erase stored movement coordinates.</li>
+        <li>&quot;rename [new name] &quot;: renames the drone to [new name]. Note that this name is used to control the drone as well.</li>
+        </ul>
+        </li>
+        </ul>
+        <p>Example:
+        <br>
+        <br> "drone1 move 300 400"
+        <br> ^ drone1 moves to (300,400)</p>
+        <p>
+          MAP:
+          <br>
+          <br> The game map is 1200px x 800px (width x height). Note that when specifying coordinates, the y-value is the distance from the top of the screen, not the bottom. For example, (300,700) would be near the bottom of the screen, while (200,100) is near the top.
+        </p>
+      </p>
+    </div>
+  </body>
+</html>
