@@ -1,2 +1,2 @@
-# drone_RTS
+# CLI_RTS
  simple command line-based RTS webgame
