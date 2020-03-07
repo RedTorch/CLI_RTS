@@ -1,2 +1,2 @@
 # CLI_RTS
- simple command line-based RTS webgame
+ simple framework for a command line-based RTS webgame.
